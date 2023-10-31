@@ -1,22 +1,113 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>CSS animation in JavaScript</title>    
-    <style>
-      .box {
-        width: 100px;
-        height: 100px; 
-        border: 1px solid #000;
-        transition: background-color 1s ease;
-      }
 
-    </style>
+<head>
+  <meta charset="utf-8" />
+  <title>CSS animation in JavaScript</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+      transition: background-color 1s ease;
+    }
+
+    .controls button {
+      transition: background-color 1s ease;
+    }
+  </style>
 </head>
+
 <body>
-  
+
+  <label for="red">
+    <div
+      class="box"
+      id="red-box"
+    ></div>
+  </label>
+  <input
+    type="radio"
+    id="red"
+    name="color"
+    value="red"
+  >
+
+  <label for="green">
+    <div
+      class="box"
+      id="green-box"
+    ></div>
+  </label>
+  <input
+    type="radio"
+    id="green"
+    name="color"
+    value="green"
+  >
+
+  <label for="blue">
+    <div
+      class="box"
+      id="blue-box"
+    ></div>
+  </label>
+  <input
+    type="radio"
+    id="blue"
+    name="color"
+    value="blue"
+  >
+
+
   <div class="box"></div>
+
+  <div class="controls">
+    <button
+      type="button"
+      data-color="red"
+    >red</button>
+    <button
+      type="button"
+      data-color="green"
+    >green</button>
+    <button
+      type="button"
+      data-color="blue"
+    >blue</button>
+
+    <button
+      type="button"
+      data-color=""
+    >User Defined</button>
+
+    <input
+      type="color"
+      class="color-input"
+    >
+
+    <button
+      type="button"
+      class="reset-button"
+    >Reset
+    </button>
+
+  </div>
+
+  <label for="color-input">
+    <input
+      type="text"
+      id="color-input"
+      placeholder="Introduceți codul hex al culorii"
+    >
+  </label>
+
+  <div
+    class="box"
+    id="color-box"
+  ></div>
 
   <script src="app.js"></script>
 </body>
+
 </html>
